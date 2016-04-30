@@ -50,8 +50,8 @@ public class WebSocket extends Transport {
         final WebSocket self = this;
         OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder()
                 // turn off timeouts (github.com/socketio/engine.io-client-java/issues/32)
-                .connectTimeout(0, TimeUnit.MILLISECONDS)
-                .readTimeout(0, TimeUnit.MILLISECONDS)
+                .connectTimeout(60, TimeUnit.MILLISECONDS)
+                .readTimeout(60, TimeUnit.MILLISECONDS)
                 .writeTimeout(0, TimeUnit.MILLISECONDS);
 
         if (this.sslContext != null) {
